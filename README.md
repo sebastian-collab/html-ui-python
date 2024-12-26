@@ -31,8 +31,8 @@ To run this app locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/drawing-app.git
-   cd drawing-app
+   git clone https://github.com/sebastian-collab/html-ui-python.git
+   cd html-ui-python
    ```
 
 2. **Install dependencies**:

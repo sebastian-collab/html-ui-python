@@ -1,9 +1,9 @@
 const canvas = document.getElementById("drawingCanvas");
 const ctx = canvas.getContext("2d");
 
-// Set canvas size
-canvas.width = 600;
-canvas.height = 400;
+// Set canvas size to full screen
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 // Variables to track drawing state
 let isDrawing = false;
@@ -50,4 +50,13 @@ brushSizeSlider.addEventListener("input", (e) => {
 // Clear the canvas
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+// Save the canvas as an image
+function saveCanvas() {
+    const dataURL = canvas.toDataURL("image/png"); // Convert canvas to image URL
+    const link = document.createElement("a");
+    link.href = dataURL;
+    link.download = "drawing.png"; // Default file name
+    link.click(); // Simulate click to trigger download
 }

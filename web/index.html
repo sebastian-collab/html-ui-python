@@ -8,16 +8,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>Drawing App</h1>
-        <div class="controls">
-            <label for="colorPicker">Color: </label>
-            <input type="color" id="colorPicker" value="#000000">
-            <label for="brushSize">Brush Size: </label>
-            <input type="range" id="brushSize" min="1" max="10" value="2">
-        </div>
         <canvas id="drawingCanvas"></canvas>
-        <div class="buttons">
-            <button onclick="clearCanvas()">Clear</button>
+        <div class="dock">
+            <div class="controls">
+                <label for="colorPicker">Color: </label>
+                <input type="color" id="colorPicker" value="#000000">
+                <label for="brushSize">Brush Size: </label>
+                <input type="range" id="brushSize" min="1" max="10" value="2">
+            </div>
+            <div class="buttons">
+                <button onclick="clearCanvas()">Clear</button>
+                <button onclick="saveCanvas()">Save</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
